@@ -57,3 +57,7 @@ All additional coverage added which has not been explicitly asked for will stren
 ## Issues/Support
 
 If you encounter any issues or have any questions regarding the task, please do not hesitate to reach out to your recruiter and we will endevour to address your concerns as soon as possible.
+
+
+## Potential bugs that I encounter.
+- The countdown timer doesn't reset after 1 min past the start_time.

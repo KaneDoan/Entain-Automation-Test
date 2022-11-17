@@ -19,4 +19,27 @@ describe('Page Content', () => {
       })
     });
   })
+
+  it('Should have 5 items to be displayed on the list', () => {
+    cy.visit('');
+    cy.get('[data-testid="race-list"] div') 
+    .should('have.length', 5) 
+  })
+
+  it('Race name, Race number and Countdown should be available', () => {
+    cy.visit('');
+
+    cy.get('[data-testid="count-down-string"]').each(($el, index, $list) => {
+
+      //Race number
+      cy.get('[data-testid="race-list"]>div>b').eq(index).should('not.be.empty').and('be.visible');
+
+      //Race name
+      cy.get('[data-testid="race-list"]>div>p').eq(index).should('not.be.empty').and('be.visible');
+
+      //Countdown timer
+      cy.get('[data-testid="race-list"]>p').eq(index).should('not.be.empty').and('be.visible');
+  })
+  })
+
 });
